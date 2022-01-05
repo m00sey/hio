@@ -6,7 +6,6 @@ hio.base.filing module
 import os
 import stat
 import shutil
-import sys
 import tempfile
 from contextlib import contextmanager
 
@@ -89,8 +88,7 @@ class Filer():
         stat.S_IWUSR Owner has write permission.
         stat.S_IXUSR Owner has execute permission.
     """
-    # in the case of a pyinstaller packaged application we default to the pyinstaller app location
-    HeadDirPath = sys._MEIPASS if getattr(sys, 'frozen', False) and getattr(sys, '_MEIPASS', '') else "/usr/local/var"
+    HeadDirPath = "/usr/local/var"
     TailDirPath = "hio"
     CleanTailDirPath = "hio/clean"
     AltHeadDirPath = "~"  # put in ~ as fallback when desired not permitted
