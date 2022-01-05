@@ -88,7 +88,7 @@ class Filer():
         stat.S_IWUSR Owner has write permission.
         stat.S_IXUSR Owner has execute permission.
     """
-    HeadDirPath = "/usr/local/var"
+    HeadDirPath = "/usr/local/var"  # default in /usr/local/var
     TailDirPath = "hio"
     CleanTailDirPath = "hio/clean"
     AltHeadDirPath = "~"  # put in ~ as fallback when desired not permitted
